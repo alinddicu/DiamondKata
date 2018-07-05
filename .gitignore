@@ -3,3 +3,8 @@
 ################################################################################
 
 /DiamondKata/DiamondKata/DiamondKata/bin/Debug
+/DiamondKata/DiamondKata/DiamondKata/obj/Debug
+/DiamondKata/DiamondKata/DiamondKata.Test/bin/Debug
+/DiamondKata/DiamondKata/DiamondKata.Test/obj/Debug
+/DiamondKata/DiamondKata/packages/NFluent.2.3.1
+/DiamondKata/DiamondKata/.vs/DiamondKata/v14/.suo
