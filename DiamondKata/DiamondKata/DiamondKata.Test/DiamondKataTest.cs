@@ -24,7 +24,13 @@
 		[TestMethod]
 		public void TestB()
 		{
-			Check.That(new DiamondKata().Print('B')).IsEqualTo(new List<string> { " A ", "B B", " A " });
+			var exppectedDiamond = new List<string>
+			{
+				" A ",
+				"B B",
+				" A "
+			};
+			Check.That(new DiamondKata().Print('B')).IsEqualTo(exppectedDiamond);
 		}
 
 		[TestMethod]
