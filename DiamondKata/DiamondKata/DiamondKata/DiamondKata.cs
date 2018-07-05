@@ -7,7 +7,6 @@
 	public class DiamondKata
 	{
 		private static readonly char[] CapitalLetters = Enumerable.Range(65, 26).Select(i => (char)i).ToArray();
-		private static int CapitalLettersCount = CapitalLetters.Length;
 
 		public List<string> Print(char mainLetter)
 		{
@@ -22,9 +21,8 @@
 			{
 				return new List<string> { CapitalLetters[0].ToString() };
 			}
-			
-			var result = new List<string>();
-			result.Add(BuildExtremeLine(mainLetter));
+
+			var result = new List<string> { BuildLine(mainLetter) };
 			for (var i = 0; i < mainLetterIndex - 1; i++)
 			{
 				var currentLetter = CapitalLetters[i + 1];
@@ -39,7 +37,7 @@
 				result.Add(BuildLine(mainLetter, currentLetter));
 			}
 
-			result.Add(BuildExtremeLine(mainLetter));
+			result.Add(BuildLine(mainLetter));
 
 			return result;
 		}
@@ -55,7 +53,7 @@
 				+ "".PadRight(' ', mainLetterIndex - currentLetterIndex);
 		}
 
-		private string BuildExtremeLine(char mainLetter)
+		private string BuildLine(char mainLetter)
 		{
 			var mainLetterIndex = GetIndex(mainLetter);
 			return CapitalLetters[0].ToString().PadLeft(' ', mainLetterIndex).PadRight(' ', mainLetterIndex);
